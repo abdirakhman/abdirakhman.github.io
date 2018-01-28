@@ -1,74 +1,118 @@
-<p><a href="http://ktlwik.tk/">
-<img border="0" src="/images/unnamed.png" width="100" height="100">
-</a>
-</p>
+<html>
 
-<h2>Day 1. Maximum Bipartite Matching</h2>
-<p><a href="http://e-maxx.ru/algo/kuhn_matching"> Material from e-maxx</a></p>
-<p><a href="https://vjudge.net/contest/207573">Contest result</a></p>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/images/dino.png" type="image/png">
+    <!-- Bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <title>Aktobe BIL</title>
+</head>
 
-<style>
-table, th, td {
-    border: 1px solid black;
-}
-</style>
-<title>Day 1</title>
-<table>
-<tbody>
-<tr>
-<th>Participant</th>
-<th><a href="https://vjudge.net/contest/207573#problem/A">A</a></th>
-<th><a href="https://vjudge.net/contest/207573#problem/B">B</a></th>
-<th><a href="https://vjudge.net/contest/207573#problem/C">C</a></th>
-<th><a href="https://vjudge.net/contest/207573#problem/D">D</a></th>
-<th><a href="https://vjudge.net/contest/207573#problem/E">E</a></th>
-<th><a href="https://vjudge.net/contest/207573#problem/F">F</a></th>
-</tr>
-<tr>
-<td><a href="https://vjudge.net/user/nuradil">nuradil</a></td>
-<td>&nbsp; +</td>
-<td>&nbsp;</td>
-<td>-6</td>
-<td>+1</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><a href="https://vjudge.net/user/Ismail_A">Ismail_A</a></td>
-<td>+10</td>
-<td>&nbsp;</td>
-<td>-5</td>
-<td>+2</td>
-<td>-12</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><a href="https://vjudge.net/user/JustSomeDude22">JustSomeDude22</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>-15</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><a href="https://vjudge.net/user/Dilzhan">Dilzhan</a></td>
-<td>&nbsp;-2</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><a href="https://vjudge.net/user/erkebulan01">erkebulan01</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
+<body>
+    <div class="jumbotron">
+        <h2 style="margin-bottom: 50px;">Day 1. Maximum Bipartite Matching</h2>
+        <p><a href="http://e-maxx.ru/algo/kuhn_matching"> Material from e-maxx</a></p>
+        <p><a href="https://vjudge.net/contest/207573">Contest page</a></p>
+        <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        </style>
+        <table id="contest-rank-table-export" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="rank" rowspan="2">
+                        <div>Rank</div>
+                    </th>
+                    <th class="team" rowspan="2">
+                        <div>Team</div>
+                    </th>
+                    <th class="solve" rowspan="2">
+                        <div>Score</div>
+                    </th>
+                    <th class="penalty" rowspan="2">
+                        <div>Penalty</div>
+                    </th>
+                    <th class="prob undefined">
+                        <div><a href="#problem/A">A</a></div>
+                    </th>
+                    <th class="prob undefined">
+                        <div><a href="#problem/B">B</a></div>
+                    </th>
+                    <th class="prob accepted">
+                        <div><a href="#problem/C">C</a></div>
+                    </th>
+                    <th class="prob undefined">
+                        <div><a href="#problem/D">D</a></div>
+                    </th>
+                    <th class="prob undefined">
+                        <div><a href="#problem/E">E</a></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr c="207573" u="132171" class="this ">
+                    <td class="rank meta">1</td>
+                    <td class="team meta">
+                        <div><a href="/user/nuradil" target="_blank">nuradil <span style="color:gray">(nuradil)</span></a></div>
+                    </td>
+                    <td class="solved meta"><a href="#status/nuradil/-/0/">2</a></td>
+                    <td class="penalty meta"> <span class="hms">04:58:05</span></td>
+                    <td class="prob accepted fb">02:30:42&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob accepted">02:07:23 <span>(-1)</span></td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                </tr>
+                <tr c="207573" u="101741" class="this ">
+                    <td class="rank meta">2</td>
+                    <td class="team meta">
+                        <div><a href="/user/Ismail_A" target="_blank">Ismail_A <span style="color:gray">(Abdrakhman)</span></a></div>
+                    </td>
+                    <td class="solved meta"><a href="#status/Ismail_A/-/0/">2</a></td>
+                    <td class="penalty meta"> <span class="hms">08:43:09</span></td>
+                    <td class="prob accepted">02:33:14 <span>(-10)</span></td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob accepted">02:09:55 <span>(-2)</span></td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                </tr>
+                <tr c="207573" u="132560" class="this ">
+                    <td class="rank meta">4</td>
+                    <td class="team meta">
+                        <div><a href="/user/Dilzhan" target="_blank">Dilzhan <span style="color:gray">(Dilzhan)</span></a></div>
+                    </td>
+                    <td class="solved meta"><a href="#status/Dilzhan/-/0/">0</a></td>
+                    <td class="penalty meta"> <span class="hms">00:00:00</span></td>
+                    <td class="prob failed"> <span>(-1)</span></td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                </tr>
+                <tr c="207573" u="133029" class="this ">
+                    <td class="rank meta">5</td>
+                    <td class="team meta">
+                        <div><a href="/user/JustSomeDude22" target="_blank">JustSomeDude22 <span style="color:gray">(JustSomeDude22)</span></a></div>
+                    </td>
+                    <td class="solved meta"><a href="#status/JustSomeDude22/-/0/">0</a></td>
+                    <td class="penalty meta"> <span class="hms">00:00:00</span></td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob failed"> <span>(-14)</span></td>
+                    <td class="prob ">&nbsp;</td>
+                    <td class="prob ">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
